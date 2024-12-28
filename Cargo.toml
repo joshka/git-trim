@@ -23,11 +23,12 @@ required-features = ["build-man"]
 build-man = ["man"]
 
 [build-dependencies]
-vergen = "7.4.4"
+anyhow = "1.0.95"
+vergen-gix = { version = "1.0.0", features = ["build", "cargo", "rustc", "si"] }
 
 [dependencies]
 dialoguer = "0.10.2"
-env_logger = "0.10.0"
+env_logger = "0.11.6"
 git2 = "0.15.0"
 log = "0.4.17"
 paw = "1.0.0"
@@ -37,7 +38,6 @@ rayon = "1.6.0"
 thiserror = "1.0.37"
 crossbeam-channel = "0.5.6"
 textwrap = { version = "0.16.0", features = ["terminal_size"] }
-
 man = { version = "0.3.0", optional = true }
 
 [dev-dependencies]
