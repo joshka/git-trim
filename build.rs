@@ -1,10 +1,10 @@
-use vergen_gix::{BuildBuilder, CargoBuilder, Emitter, GixBuilder, RustcBuilder, SysinfoBuilder};
+use vergen_git2::{BuildBuilder, CargoBuilder, Emitter, Git2Builder, RustcBuilder, SysinfoBuilder};
 
 fn main() -> anyhow::Result<()> {
     Emitter::default()
         .add_instructions(&BuildBuilder::all_build()?)?
         .add_instructions(&CargoBuilder::all_cargo()?)?
-        .add_instructions(&GixBuilder::all_git()?)?
+        .add_instructions(&Git2Builder::all_git()?)?
         .add_instructions(&RustcBuilder::all_rustc()?)?
         .add_instructions(&SysinfoBuilder::all_sysinfo()?)?
         .emit()

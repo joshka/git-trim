@@ -1,8 +1,8 @@
 mod remote_head_change_checker;
 
+use std::collections::HashSet;
 use std::convert::TryFrom;
 use std::iter::FromIterator;
-use std::{collections::HashSet, io::stdout};
 
 use anyhow::{Context, Result};
 use clap::Parser;
