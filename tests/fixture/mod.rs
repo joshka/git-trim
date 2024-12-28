@@ -66,7 +66,7 @@ impl Fixture {
         println!("{:?}", tempdir.path());
         let mut command = Command::new("bash");
         command
-            .args(&["--noprofile", "--norc", "-xeo", "pipefail"])
+            .args(["--noprofile", "--norc", "-xeo", "pipefail"])
             .current_dir(tempdir.path())
             .stdin(Stdio::piped())
             .stdout(Stdio::piped())
